@@ -10,5 +10,6 @@ gcloud compute instances create worker --zone=us-east4-c --machine-type=n2-stand
 gcloud compute ssh main --ssh-key-file=~/.ssh/id_rsa  
 gcloud compute ssh worker --ssh-key-file=~/.ssh/id_rsa  
 gcloud compute scp $(find $HOME -name k8sMaster.sh) main:~ --ssh-key-file=~/.ssh/id_rsa
+gcloud compute scp $(find $HOME -name k8sSecond.sh) worker:~ --ssh-key-file=~/.ssh/id_rsa
 # E entrei! =) I'm in bitches!
 
